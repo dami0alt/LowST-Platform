@@ -1,0 +1,27 @@
+targets:
+- target: "PcComponentes"
+  url_base: "https://www.pccomponentes.com/"
+  products:
+    - name: "IPhone_17_pro_max"
+      url: "https://www.pccomponentes.com/apple-iphone-17-pro-max-256gb-azul-oscuro"
+      
+    - name: "Macbook_Air_M4_256GB"
+      url: "https://www.pccomponentes.com/apple-macbook-air-m4-10-nucleos-16-gb-256gb-ssd-gpu-8-nucleos-136-medianoche"
+
+- target: "MediaMarkt"
+  url_base: "https://www.mediamarkt.es/es/"
+  products:
+    - name: "IPhone_17_pro_max"
+      url: "https://www.mediamarkt.es/es/product/_apple-iphone-17-pro-max-azul-oscuro-256-gb-5g-69-oled-super-retina-xdr-chip-a19-pro-ios-1606146.html"
+    
+    - name: "Macbook_Air_M4_256GB"
+      url: "https://www.mediamarkt.es/es/product/_apple-macbook-air-2025-136-retina-chip-m4-apple-cpu-de-10-nucleos-gpu-de-8-nucleos-16-gb-ram-256gb-de-ssd-medianoche-1596179.html"
+
+# - target: "ElCorteIngles"
+#   url_base: "https://www.elcorteingles.es/"
+#   products:
+#     - name: "IPhone_17_pro_max"
+#       url: "https://www.elcorteingles.es/electronica/A56790282-apple-iphone-17-pro-max-256gb-azul-oscuro-movil-libre/?stype=text_box_multi&parentCategoryId=999.51569013&color=Azul+oscuro"
+    
+#     - name: "Macbook_Air_M4_256GB"
+#       url: "https://www.elcorteingles.es/electronica/A54883146-apple-macbook-air-13-2025-m4-16gb-256gb-ssd-13-macos/?stype=search_redirect&parentCategoryId=999.7624603013&color=Medianoche"
