@@ -20,6 +20,9 @@ with open("./configs/targets.yaml","r",encoding="utf-8") as f:
     config = yaml.safe_load(f)
 
 for target in config["targets"]:
+    if not os.path.exists(data_dir):
+        os.mkdir(data_dir)
+        
     target_dir = f"{data_dir}/{target['target']}"
     if not os.path.exists(target_dir):
         os.mkdir(target_dir)

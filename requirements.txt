@@ -7,3 +7,4 @@ numpy           # Dependencia matemática que suele pedir Pandas.
 python-dotenv
 curl_cffi
 pyyaml
+duckdb
