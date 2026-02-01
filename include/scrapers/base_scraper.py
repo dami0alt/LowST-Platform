@@ -1,0 +1,46 @@
+import logging
+from curl_cffi import requests
+from datetime import datetime 
+import unicodedata
+import re
+from dataclasses import dataclass 
+from abc import ABC, abstractmethod
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+@dataclass
+class Product():
+    name: str  
+    price: float
+    currency: str # $ or €
+    url: str
+    timestamp: datetime
+
+class ScraperBase(ABC):
+    @abstractmethod  
+    def extract_data(self, url:str) -> Product:
+        pass
+
+    def _get_html(self, url:str, impersonate:str ="chrome"):
+        try:
+            r = requests.get(url,impersonate=impersonate)
+            r.raise_for_status()
+            return r.text 
+        except requests.exceptions.RequestException as e:
+            logger.error(f"Error getting to {url}:{e}")
+            return None
+    def _normalize_text(self, text:str) -> str:
+        text = text.replace('""', '"').replace('"', '')
+        text = text.replace(",", " -")
+
+        text = text.replace("\xa0", " ")
+        text = re.sub(r"\s+", " ", text)
+        text = unicodedata.normalize("NFKD", text)
+
+        text = "".join(c for c in text if not unicodedata.combining(c))
+        text = " ".join(text.split())
+        
+        return text.strip()
+
+        
