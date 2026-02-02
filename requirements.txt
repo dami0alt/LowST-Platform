@@ -1,10 +1,17 @@
 python 
-requests
-beautifulsoup4  # Convierte el HTML crudo en un árbol de objetos que puedes navegar.
-lxml            # El motor (parser) que usa BeautifulSoup por debajo. Es más rápido que el de defecto.
-pandas          # El Excel de Python. Lo usaremos para guardar los datos en CSV/Parquet limpio.
-numpy           # Dependencia matemática que suele pedir Pandas.
+requests   
+pandas          
+numpy         
 python-dotenv
-curl_cffi
 pyyaml
+
+#scraper engines
+curl_cffi
+beautifulsoup4 
+lxml 
+
+#warehouse
 duckdb
+
+#Just for testing
+coloredlogs
