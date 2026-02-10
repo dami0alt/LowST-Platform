@@ -10,11 +10,14 @@ logger = logging.getLogger(__name__)
 
 @dataclass
 class Product():
+    ean: int
     name: str  
+    manufacturer: str
     price: float
     currency: str
     url: str
     timestamp: datetime
+    source: str
 
 class ScraperBase(ABC):
     @abstractmethod  
